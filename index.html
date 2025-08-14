@@ -61,10 +61,12 @@
                 <pre>
 <code>git config --global user.name "Tên Của Bạn"</code> 
 <code>git config --global user.email "email_của_bạn@example.com"</code></pre>
+                <img src = "images/git user name_email.png" alt="Cài đặt Git" >
                 <p>Để kiểm tra lại các thiết lập, bạn có thể dùng lệnh:</p>
                 <pre><code>git config --list</code></pre>
                 <img src = "images/config_list.jpg" alt="Cài đặt Git" >
-                <p>Điều này sẽ hiển thị các thông tin bạn vừa thiết lập, bao gồm tên và email.</p>
+                <p>Điều này sẽ hiển thị các thông tin bạn vừa thiết lập, bao gồm tên và email.
+                Bạn đã hoàn thành bước đầu tiên là cài đặt ban đầu, ở phần tiếp theo chúng ta sẽ tìm hiểu các câu lệnh cơ bản.</p>
             </section>
 
             <section id="phan-4">
@@ -76,26 +78,21 @@
                 <pre>
 <code>git init</code></pre>
                 <p>Sau câu lệnh init bạn vừa khời tạo 1 local repository, việc của bạn là conect nó với 1 remote 
-                    repository trên GitHub, nếu bạn đã có sẵn thì hãy copy link và điền vào. Nếu chưa hãy truy cập Gi
-                    tHub.com -> Create a new repository -> Repository name -> Crate repository. Sau đó bạn sẽ có 1 link xuất
+                    repository trên GitHub, nếu bạn đã có sẵn thì hãy copy link và điền vào. Nếu chưa hãy truy cập GitHub.com -> Create a new repository -> Repository name -> Crate repository. Sau đó bạn sẽ có 1 link xuất
                      hiện, hãy copy nó để conect với local repository của bạn thông quan câu lệnh phía dưới.</p>
   </p>
                 <pre><code>git remote add origin [URL_của_GitHub_Repo]</code></pre>
-                
-                <h4>b) Clone một Remote Repository có sẵn</h4>
-                <pre><code>git clone [URL_của_GitHub_Repo]</code></pre>
+                <img src = "images/git remote add origin.png" alt="Cài đặt Git" >
+                <p>Sau câu lệnh này, local repository của bạn và remote repository đã được kết nối với nhau, khi ta thực hiện các câu lệnh thì có thể tương tác giữa các ripository.</p>
 
                 <h3>Git Workflow: Quy trình làm việc hiệu quả</h3>
                 <p>Đây là quy trình làm việc cốt lõi của Git. Chúng ta sẽ làm quen với các thành phần:</p>
-                <img src="https://i.imgur.com/your_image_url.png" alt="Sơ đồ Git Workflow">
+                <img src="https://daynhauhoc.s3.dualstack.ap-southeast-1.amazonaws.com/optimized/3X/1/1/1125499c1c0bf4d102d60e1ca46db0c878da03db_2_593x500.png" alt="Sơ đồ Local và Remote Repository">
                 <ul>
-                    <li><strong>Working Directory:</strong> Nơi bạn làm việc trực tiếp.</li>
-                    <li><strong>Staging Area:</strong> Khu vực trung gian để chuẩn bị các thay đổi.</li>
-                    <li><strong>Local Repository:</strong> Nơi lưu trữ các bản "commit" đã hoàn thiện.</li>
+                    <li><strong>Working Directory:</strong> Là nơi bạn làm việc trực tiếp với các tệp tin của dự án. Đây là thư mục trên máy tính của bạn chứa tất cả các tệp và thư mục mà bạn đang chỉnh sửa, thêm, hoặc xóa. Bất kỳ thay đổi nào bạn thực hiện (ví dụ: viết code, sửa lỗi) đều nằm ở đây. Ban đầu, các thay đổi này chưa được Git theo dõi.</li>
+                    <li><strong>Staging Area:</strong> Staging Area, hay còn gọi là Index, là một khu vực trung gian. Khi bạn đã hoàn thành một phần công việc và muốn chuẩn bị lưu lại (commit), bạn sẽ dùng lệnh git add để "đưa" các tệp đã thay đổi vào khu vực này. Staging Area giống như một "trạm trung gian giữa local và remote" nơi bạn chọn lọc và sắp xếp các thay đổi để chuẩn bị push lên remote repository để lưu lại những chỉnh sửa gần đây với project. Điều này cho phép bạn nhóm các thay đổi có liên quan lại với nhau thành một commit duy nhất.</li>
+                    <li><strong>Local Repository:</strong> Là nơi Git lưu trữ tất cả lịch sử commit của dự án trên máy tính của bạn. Khi bạn thực hiện lệnh git commit, các thay đổi từ Staging Area sẽ được lưu lại vĩnh viễn vào Local Repository dưới dạng một commit (bản ghi) mới. Mỗi commit này có một mã định danh duy nhất (hash) và bao gồm thông điệp mô tả những thay đổi đã thực hiện. Đây là kho lưu trữ đầy đủ và an toàn nhất của dự án trên máy của bạn.</li>
                 </ul>
-
-                <h4>Lệnh <code>git status</code></h4>
-                <pre><code>$ git status</code></pre>
 
                 <h4>Lệnh <code>git add</code></h4>
                 <pre><code># Thêm một file cụ thể
@@ -103,13 +100,21 @@ $ git add ten_file_cu_the.txt
 
 # Thêm tất cả các thay đổi
 $ git add .</code></pre>
-
+ <p>Lệnh git add dùng để thêm các thay đổi từ vùng làm việc (Working Directory) vào khu vực trung gian (Staging Area). Điều này giống như việc bạn chọn ra những tệp nào muốn lưu lại trong lần commit tiếp theo.</p>
+               
                 <h4>Lệnh <code>git commit</code></h4>
-                <pre><code>$ git commit -m "Thêm chức năng đăng nhập và cập nhật giao diện"</code></pre>
+                <pre><code>$ git commit -m "Commit message"</code></pre>
+                <p>Thông điệp (commit message): Một đoạn văn bản mô tả ngắn gọn và súc tích về những thay đổi đã được thực hiện trong commit này. Thông thường bạn sẽ mô tả những thay đổi với file đã add ở câu lệnh trước đó, chẳng hạn như "Create a new index.html file" hay bạn vừa sửa function A thì commit "Change function A"</p>
+                <img src = "images/git commit.png" alt="Cài đặt Git" >
+                <p>Ở đây mình vừa add 1 file index.html và lưa commit rằng "Create a new index.html". Git phản hồi rằng đã thêm 1 file và thay đổi 10 dòng trong đó. Lúc này file và commit vẫn đang ở trong stage area, bạn và đồng nghiệp vẫn chưa thể thấy nó trên GitHub, việc tiếp theo của bạn và Push nó lên nhờ câu lệnh Push ở phía sau. </p>
 
                 <h4>Lệnh <code>git push</code></h4>
                 <pre><code>$ git push origin [tên_nhánh]</code></pre>
+
                 
+                <h4>Lệnh <code>git status</code></h4>
+                <pre><code>$ git status</code></pre>
+
                 <h4>Lệnh <code>git pull</code> và <code>git fetch</code></h4>
                 <pre><code>$ git pull origin [tên_nhánh]</code></pre>
 
