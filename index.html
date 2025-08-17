@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,36 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.jpg" type="image/jpg">
 </head>
+
 <body>
 
     <div class="container">
         <header>
             <h1>Giáo Trình Cơ Bản Về Git và GitHub: Từ A đến Z</h1>
-            <p>Chào mừng các bạn đến với khóa học Git và GitHub! Trong giáo trình này, chúng ta sẽ cùng nhau khám phá Git - hệ thống quản lý phiên bản mạnh mẽ, và GitHub - nền tảng lưu trữ mã nguồn lớn nhất thế giới. Dù bạn là người mới bắt đầu hay đã có kinh nghiệm, khóa học này sẽ cung cấp cho bạn kiến thức nền tảng vững chắc để làm việc hiệu quả hơn trong các dự án cá nhân và nhóm.</p>
+            <p>Chào mừng các bạn đến với khóa học Git và GitHub! Trong giáo trình này, chúng ta sẽ cùng nhau khám phá
+                Git - hệ thống quản lý phiên bản mạnh mẽ, và GitHub - nền tảng lưu trữ mã nguồn lớn nhất thế giới. Dù
+                bạn là người mới bắt đầu hay đã có kinh nghiệm, khóa học này sẽ cung cấp cho bạn kiến thức nền tảng vững
+                chắc để làm việc hiệu quả hơn trong các dự án cá nhân và nhóm.</p>
         </header>
 
         <main>
             <section id="phan-1">
                 <h2>1. Git & GitHub: Phân Biệt và Liên Kết</h2>
-                <p>Trước tiên, chúng ta cần làm rõ hai khái niệm này. Đây là điều mà nhiều người mới học thường nhầm lẫn.</p>
-                
+                <p>Trước tiên, chúng ta cần làm rõ hai khái niệm này. Đây là điều mà nhiều người mới học thường nhầm
+                    lẫn.</p>
+
                 <h3>Git là gì?</h3>
-                <p><strong>Git</strong> là một <strong>hệ thống quản lý phiên bản phân tán (Distributed Version Control System - DVCS)</strong>. Hãy hình dung nó như một cỗ máy thời gian dành cho mã nguồn của bạn. Nó cho phép bạn theo dõi mọi thay đổi, lưu lại các "bản chụp" (snapshot) của dự án theo từng mốc thời gian, và dễ dàng quay lại các phiên bản trước đó khi cần. Git được phát triển bởi Linus Torvalds (người tạo ra Linux) để quản lý mã nguồn của hệ điều hành Linux.</p>
+                <p><strong>Git</strong> là một <strong>hệ thống quản lý phiên bản phân tán (Distributed Version Control
+                        System - DVCS)</strong>. Hãy hình dung nó như một cỗ máy thời gian dành cho mã nguồn của bạn. Nó
+                    cho phép bạn theo dõi mọi thay đổi, lưu lại các "bản chụp" (snapshot) của dự án theo từng mốc thời
+                    gian, và dễ dàng quay lại các phiên bản trước đó khi cần. Git được phát triển bởi Linus Torvalds
+                    (người tạo ra Linux) để quản lý mã nguồn của hệ điều hành Linux.</p>
 
                 <h3>GitHub là gì?</h3>
-                <p><strong>GitHub</strong> là một <strong>nền tảng lưu trữ mã nguồn trực tuyến</strong> sử dụng Git. Nếu Git là cỗ máy thời gian trên máy tính của bạn, thì GitHub là "ngân hàng" lưu trữ an toàn các bản sao của cỗ máy đó trên internet. Nó cho phép nhiều người cùng làm việc trên một dự án, chia sẻ mã nguồn, và theo dõi tiến độ một cách hiệu quả.</p>
+                <p><strong>GitHub</strong> là một <strong>nền tảng lưu trữ mã nguồn trực tuyến</strong> sử dụng Git. Nếu
+                    Git là cỗ máy thời gian trên máy tính của bạn, thì GitHub là "ngân hàng" lưu trữ an toàn các bản sao
+                    của cỗ máy đó trên internet. Nó cho phép nhiều người cùng làm việc trên một dự án, chia sẻ mã nguồn,
+                    và theo dõi tiến độ một cách hiệu quả.</p>
 
                 <p><strong>Tóm lại:</strong></p>
                 <ul>
@@ -35,38 +48,49 @@
 
             <section id="phan-2">
                 <h2>2. Repository: Kho Chứa Mã Nguồn</h2>
-                <p><strong>Repository (hay kho chứa)</strong> là nơi Git lưu trữ toàn bộ lịch sử thay đổi của dự án. Nó chứa tất cả các tệp (file), thư mục và các thông tin meta của dự án.</p>
-                
+                <p><strong>Repository (hay kho chứa)</strong> là nơi Git lưu trữ toàn bộ lịch sử thay đổi của dự án. Nó
+                    chứa tất cả các tệp (file), thư mục và các thông tin meta của dự án.</p>
+
                 <p>Có hai loại repository chính:</p>
                 <ul>
-                    <li><strong>Local Repository:</strong> Đây là kho chứa được tạo trên máy tính của bạn. Mọi thao tác như thêm file, sửa code, hay lưu lại lịch sử (commit) đều diễn ra trên local repository này.</li>
-                    <li><strong>Remote Repository:</strong> Đây là kho chứa được đặt trên một server từ xa (ví dụ như GitHub). Nó dùng để chia sẻ và đồng bộ mã nguồn giữa nhiều người trong một dự án.</li>
+                    <li><strong>Local Repository:</strong> Đây là kho chứa được tạo trên máy tính của bạn. Mọi thao tác
+                        như thêm file, sửa code, hay lưu lại lịch sử (commit) đều diễn ra trên local repository này.
+                    </li>
+                    <li><strong>Remote Repository:</strong> Đây là kho chứa được đặt trên một server từ xa (ví dụ như
+                        GitHub). Nó dùng để chia sẻ và đồng bộ mã nguồn giữa nhiều người trong một dự án.</li>
                 </ul>
-                <img src="https://daynhauhoc.s3.dualstack.ap-southeast-1.amazonaws.com/optimized/3X/1/1/1125499c1c0bf4d102d60e1ca46db0c878da03db_2_593x500.png" alt="Sơ đồ Local và Remote Repository">
+                <img src="https://daynhauhoc.s3.dualstack.ap-southeast-1.amazonaws.com/optimized/3X/1/1/1125499c1c0bf4d102d60e1ca46db0c878da03db_2_593x500.png"
+                    alt="Sơ đồ Local và Remote Repository">
             </section>
 
             <section id="phan-3">
                 <h2>3. Cài Đặt Git và Thiết Lập Ban Đầu</h2>
                 <p>Để bắt đầu, bạn cần cài đặt Git trên máy tính của mình.</p>
-                
+
                 <h3>Bước 1: Cài đặt Git</h3>
                 <ul>
-                    <li><strong>Trên Windows:</strong> Truy cập <a href="http://git-scm.com/download/win" target="_blank">http://git-scm.com/download/win</a>, tải file cài đặt <code>.exe</code> và chạy.</li>
-                    <li><strong>Trên macOS:</strong>  Bạn không cần phải dowload, trên máy đã có sẵn, nhiệm vụ tiếp theo của bạn là thiết lập thông tin cá nhân ban đầu. </li>
+                    <li><strong>Trên Windows:</strong> Truy cập <a href="http://git-scm.com/download/win"
+                            target="_blank">http://git-scm.com/download/win</a>, tải file cài đặt <code>.exe</code> và
+                        chạy.</li>
+                    <li><strong>Trên macOS:</strong> Bạn không cần phải dowload, trên máy đã có sẵn, nhiệm vụ tiếp theo
+                        của bạn là thiết lập thông tin cá nhân ban đầu. </li>
                 </ul>
 
                 <h3>Bước 2: Thiết lập thông tin cá nhân</h3>
-                <p>Sau khi cài đặt, bạn cần khai báo tên và email. Điều này rất quan trọng vì nó sẽ được gắn vào mỗi "commit" bạn tạo ra (mục đích của nó cho biết rằng ai vừa mới cập nhật project). Việc này bạn chỉ cần làm 1 lần và hệ thống sẽ tự lưu lại.</p>
+                <p>Sau khi cài đặt, bạn cần khai báo tên và email. Điều này rất quan trọng vì nó sẽ được gắn vào mỗi
+                    "commit" bạn tạo ra (mục đích của nó cho biết rằng ai vừa mới cập nhật project). Việc này bạn chỉ
+                    cần làm 1 lần và hệ thống sẽ tự lưu lại.</p>
                 <p>Mở Terminal (trên macOS/Linux) hoặc Git Bash (trên Windows) và nhập các lệnh sau:</p>
                 <pre>
 <code>git config --global user.name "Tên Của Bạn"</code> 
 <code>git config --global user.email "email_của_bạn@example.com"</code></pre>
-                <img src = "images/git user name_email.png" alt="Cài đặt Git" >
+                <img src="images/git user name_email.png" alt="Cài đặt Git">
                 <p>Để kiểm tra lại các thiết lập, bạn có thể dùng lệnh:</p>
                 <pre><code>git config --list</code></pre>
-                <img src = "images/config_list.jpg" alt="Cài đặt Git" >
+                <img src="images/config_list.jpg" alt="Cài đặt Git">
                 <p>Điều này sẽ hiển thị các thông tin bạn vừa thiết lập, bao gồm tên và email.
-                Bạn đã hoàn thành bước đầu tiên là cài đặt ban đầu, ở phần tiếp theo chúng ta sẽ tìm hiểu các câu lệnh cơ bản.</p>
+                    Bạn đã hoàn thành bước đầu tiên là cài đặt ban đầu, ở phần tiếp theo chúng ta sẽ tìm hiểu các câu
+                    lệnh cơ bản.</p>
             </section>
 
             <section id="phan-4">
@@ -77,62 +101,112 @@
                 <p>Sử dụng câu lệnh init để khởi tạo 1 local repository mới:</p>
                 <pre>
 <code>git init</code></pre>
-                <p>Sau câu lệnh init bạn vừa khời tạo 1 local repository, việc của bạn là conect nó với 1 remote 
-                    repository trên GitHub, nếu bạn đã có sẵn thì hãy copy link và điền vào. Nếu chưa hãy truy cập GitHub.com -> Create a new repository -> Repository name -> Crate repository. Sau đó bạn sẽ có 1 link xuất
-                     hiện, hãy copy nó để conect với local repository của bạn thông quan câu lệnh phía dưới.</p>
-  </p>
+                <p>Sau câu lệnh init bạn vừa khời tạo 1 local repository, việc của bạn là conect nó với 1 remote
+                    repository trên GitHub, nếu bạn đã có sẵn thì hãy copy link và điền vào. Nếu chưa hãy truy cập
+                    GitHub.com -> Create a new repository -> Repository name -> Crate repository. Sau đó bạn sẽ có 1
+                    link xuất
+                    hiện, hãy copy nó để conect với local repository của bạn thông quan câu lệnh phía dưới.</p>
+                </p>
                 <pre><code>git remote add origin [URL_của_GitHub_Repo]</code></pre>
-                <img src = "images/git remote add origin.png" alt="Cài đặt Git" >
-                <p>Sau câu lệnh này, local repository của bạn và remote repository đã được kết nối với nhau, khi ta thực hiện các câu lệnh thì có thể tương tác giữa các ripository.</p>
+                <img src="images/git remote add origin.png" alt="Demo lệnh add">
+                <p>Sau câu lệnh này, local repository của bạn và remote repository đã được kết nối với nhau, khi ta thực
+                    hiện các câu lệnh thì có thể tương tác giữa các ripository.</p>
 
                 <h3>Git Workflow: Quy trình làm việc hiệu quả</h3>
                 <p>Đây là quy trình làm việc cốt lõi của Git. Chúng ta sẽ làm quen với các thành phần:</p>
-                <img src="https://daynhauhoc.s3.dualstack.ap-southeast-1.amazonaws.com/optimized/3X/1/1/1125499c1c0bf4d102d60e1ca46db0c878da03db_2_593x500.png" alt="Sơ đồ Local và Remote Repository">
+                <img src="https://daynhauhoc.s3.dualstack.ap-southeast-1.amazonaws.com/optimized/3X/1/1/1125499c1c0bf4d102d60e1ca46db0c878da03db_2_593x500.png"
+                    alt="Sơ đồ Local và Remote Repository">
                 <ul>
-                    <li><strong>Working Directory:</strong> Là nơi bạn làm việc trực tiếp với các tệp tin của dự án. Đây là thư mục trên máy tính của bạn chứa tất cả các tệp và thư mục mà bạn đang chỉnh sửa, thêm, hoặc xóa. Bất kỳ thay đổi nào bạn thực hiện (ví dụ: viết code, sửa lỗi) đều nằm ở đây. Ban đầu, các thay đổi này chưa được Git theo dõi.</li>
-                    <li><strong>Staging Area:</strong> Staging Area, hay còn gọi là Index, là một khu vực trung gian. Khi bạn đã hoàn thành một phần công việc và muốn chuẩn bị lưu lại (commit), bạn sẽ dùng lệnh git add để "đưa" các tệp đã thay đổi vào khu vực này. Staging Area giống như một "trạm trung gian giữa local và remote" nơi bạn chọn lọc và sắp xếp các thay đổi để chuẩn bị push lên remote repository để lưu lại những chỉnh sửa gần đây với project. Điều này cho phép bạn nhóm các thay đổi có liên quan lại với nhau thành một commit duy nhất.</li>
-                    <li><strong>Local Repository:</strong> Là nơi Git lưu trữ tất cả lịch sử commit của dự án trên máy tính của bạn. Khi bạn thực hiện lệnh git commit, các thay đổi từ Staging Area sẽ được lưu lại vĩnh viễn vào Local Repository dưới dạng một commit (bản ghi) mới. Mỗi commit này có một mã định danh duy nhất (hash) và bao gồm thông điệp mô tả những thay đổi đã thực hiện. Đây là kho lưu trữ đầy đủ và an toàn nhất của dự án trên máy của bạn.</li>
+                    <li><strong>Working Directory:</strong> Là nơi bạn làm việc trực tiếp với các tệp tin của dự án. Đây
+                        là thư mục trên máy tính của bạn chứa tất cả các tệp và thư mục mà bạn đang chỉnh sửa, thêm,
+                        hoặc xóa. Bất kỳ thay đổi nào bạn thực hiện (ví dụ: viết code, sửa lỗi) đều nằm ở đây. Ban đầu,
+                        các thay đổi này chưa được Git theo dõi.</li>
+                    <li><strong>Staging Area:</strong> Staging Area, hay còn gọi là Index, là một khu vực trung gian.
+                        Khi bạn đã hoàn thành một phần công việc và muốn chuẩn bị lưu lại (commit), bạn sẽ dùng lệnh git
+                        add để "đưa" các tệp đã thay đổi vào khu vực này. Staging Area giống như một "trạm trung gian
+                        giữa local và remote" nơi bạn chọn lọc và sắp xếp các thay đổi để chuẩn bị push lên remote
+                        repository để lưu lại những chỉnh sửa gần đây với project. Điều này cho phép bạn nhóm các thay
+                        đổi có liên quan lại với nhau thành một commit duy nhất.</li>
+                    <li><strong>Local Repository:</strong> Là nơi Git lưu trữ tất cả lịch sử commit của dự án trên máy
+                        tính của bạn. Khi bạn thực hiện lệnh git commit, các thay đổi từ Staging Area sẽ được lưu lại
+                        vĩnh viễn vào Local Repository dưới dạng một commit (bản ghi) mới. Mỗi commit này có một mã định
+                        danh duy nhất (hash) và bao gồm thông điệp mô tả những thay đổi đã thực hiện. Đây là kho lưu trữ
+                        đầy đủ và an toàn nhất của dự án trên máy của bạn.</li>
                 </ul>
 
                 <h4>Lệnh <code>git add</code></h4>
                 <pre><code># Thêm một file cụ thể
-$ git add ten_file_cu_the.txt
+git add ten_file_cu_the.txt
 
 # Thêm tất cả các thay đổi
-$ git add .</code></pre>
- <p>Lệnh git add dùng để thêm các thay đổi từ vùng làm việc (Working Directory) vào khu vực trung gian (Staging Area). Điều này giống như việc bạn chọn ra những tệp nào muốn lưu lại trong lần commit tiếp theo.</p>
-               
+git add .</code></pre>
+                <p>Lệnh git add dùng để thêm các thay đổi từ vùng làm việc (Working Directory) vào khu vực trung gian
+                    (Staging Area). Điều này giống như việc bạn chọn ra những tệp nào muốn lưu lại trong lần commit tiếp
+                    theo.</p>
+
                 <h4>Lệnh <code>git commit</code></h4>
-                <pre><code>$ git commit -m "Commit message"</code></pre>
-                <p>Thông điệp (commit message): Một đoạn văn bản mô tả ngắn gọn và súc tích về những thay đổi đã được thực hiện trong commit này. Thông thường bạn sẽ mô tả những thay đổi với file đã add ở câu lệnh trước đó, chẳng hạn như "Create a new index.html file" hay bạn vừa sửa function A thì commit "Change function A"</p>
-                <img src = "images/git commit.png" alt="Cài đặt Git" >
-                <p>Ở đây mình vừa add 1 file index.html và lưa commit rằng "Create a new index.html". Git phản hồi rằng đã thêm 1 file và thay đổi 10 dòng trong đó. Lúc này file và commit vẫn đang ở trong stage area, bạn và đồng nghiệp vẫn chưa thể thấy nó trên GitHub, việc tiếp theo của bạn và Push nó lên nhờ câu lệnh Push ở phía sau. </p>
+                <pre><code>git commit -m "Commit message"</code></pre>
+                <p>Thông điệp (commit message): Một đoạn văn bản mô tả ngắn gọn và súc tích về những thay đổi đã được
+                    thực hiện trong commit này. Thông thường bạn sẽ mô tả những thay đổi với file đã add ở câu lệnh
+                    trước đó, chẳng hạn như "Create a new index.html file" hay bạn vừa sửa function A thì commit "Change
+                    function A"</p>
+                <img src="images/git commit.png" alt="Demo lệnh commit">
+                <p>Ở đây mình vừa add 1 file index.html và lưa commit rằng "Create a new index.html". Git phản hồi rằng
+                    đã thêm 1 file và thay đổi 10 dòng trong đó. Lúc này file và commit vẫn đang ở trong stage area, bạn
+                    và đồng nghiệp vẫn chưa thể thấy nó trên GitHub, việc tiếp theo của bạn và Push nó lên nhờ câu lệnh
+                    Push ở phía sau. </p>
 
                 <h4>Lệnh <code>git push</code></h4>
-                <pre><code>$ git push origin [tên_nhánh]</code></pre>
+                <pre><code>git push origin [tên_nhánh]</code></pre>
+                <p>Thông thường khi các bạn vừa tạo thì nó sẽ là "main", hình minh hoạ ở dưới là kết quả sau khi mình
+                    push nó lên GitHub.</p>
+                <img src="images/git push.png" alt="Demo lệnh push">
 
-                
                 <h4>Lệnh <code>git status</code></h4>
-                <pre><code>$ git status</code></pre>
+                <pre><code>git status</code></pre>
+                <p>Lệnh <code>git status</code> dùng để kiểm tra trạng thái hiện tại của kho lưu trữ Git cục bộ. Nó sẽ
+                    hiển thị cho bạn:</p>
 
-                <h4>Lệnh <code>git pull</code> và <code>git fetch</code></h4>
-                <pre><code>$ git pull origin [tên_nhánh]</code></pre>
-
-                <h3>Các Lệnh Hữu Ích Khác</h3>
                 <ul>
-                    <li><strong><code>git diff</code>:</strong> Xem sự khác biệt chi tiết.</li>
-                    <li><strong><code>git log</code>:</strong> Xem lịch sử các commit.</li>
-                    <li><strong><code>git reset</code>:</strong> Hoàn tác các commit.</li>
+                    <li>Bạn đang ở nhánh nào.</li>
+                    <li>Những tệp nào đã bị thay đổi (<strong>modified</strong>) nhưng chưa được thêm vào khu vực trung
+                        gian (Staging Area).</li>
+                    <li>Những tệp nào mới được thêm vào (<strong>untracked</strong>) mà Git chưa theo dõi.</li>
+                    <li>Những tệp nào đang ở trong Staging Area và sẵn sàng để commit.</li>
                 </ul>
+
+                <h4>Lệnh <code>git diff</code> </h4>
+                <p> Ở nội dung này mình sẽ đề cập đến lệnh git diff để so sánh giữa 2 lần commit, nó cho phép bạn so
+                    sánh chính xác sự khác biệt về code giữa hai lần commit bất kỳ trong lịch sử dự án. Điều này cực kỳ
+                    hữu ích khi bạn muốn xem lại những thay đổi đã được thực hiện trong một khoảng thời gian, hoặc tìm
+                    hiểu tại sao một lỗi nào đó lại xuất hiện sau một lần commit cụ thể.
+                <p>
+                <p> Các bạn truy cập vào repository và chọn vào commit với biểu tượng đồng hồ để xem lịch sử commit, với
+                    mỗi commit sẽ có một mã định danh, đó sẽ là mã để bạn so sánh giữa 2 phiên bản giữa 2 lần commit.
+                <p>
+                    <img src="images/id commit.png" alt="Demo ảnh id commit">
+                <pre><code>git diff [commit-hash-cũ] [commit-hash-mới]</code></pre>
+
+                <h4>Lệnh <code>git log</code> </h4>
+                <p>Lệnh git log được dùng để xem lịch sử các lần commit của dự án. Nó hiển thị danh sách các commit đã
+                    được thực hiện, giúp bạn theo dõi quá trình phát triển của dự án một cách rõ ràng.</p>
+                <img src="images/git log.png" alt="Demo lệnh push">
+
+
+
+          
             </section>
 
             <section id="phan-5">
                 <h2>5. Tổng Kết</h2>
-                <p>Trong bài học này, chúng ta đã nắm vững các khái niệm cơ bản về Git và GitHub, biết cách cài đặt và thiết lập môi trường làm việc, cũng như làm quen với các lệnh Git cốt lõi để quản lý dự án.</p>
-                <p>Chúc mừng bạn đã hoàn thành bước đầu tiên! Hãy chuẩn bị tinh thần để khám phá sức mạnh thực sự của Git nhé!</p>
+                <p>Trong bài học này, chúng ta đã nắm vững các khái niệm cơ bản về Git và GitHub, biết cách cài đặt và
+                    thiết lập môi trường làm việc, cũng như làm quen với các lệnh Git cốt lõi để quản lý dự án.</p>
+                <p>Chúc mừng bạn đã hoàn thành bước đầu tiên! Hãy chuẩn bị tinh thần để khám phá sức mạnh thực sự của
+                    Git nhé!</p>
             </section>
         </main>
     </div>
 
 </body>
+
 </html>
